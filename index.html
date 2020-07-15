@@ -6,6 +6,19 @@
   <title>TypeScript</title>
 </head>
 <body>
-  <script src="introducao/basico.ts"></script>
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="src/modulos/modulos.js"></script>
+  <script>
+    SystemJS.config({
+      baseUrl: '/modulos',
+      packages: {
+        '/modulos': {
+          defaultJSExtension: true
+        }
+      }
+    });
+
+    SystemJS.import('./modulos/modulos.js')
+  </script>
 </body>
 </html>
