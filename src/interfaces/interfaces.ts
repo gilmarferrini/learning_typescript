@@ -1,28 +1,22 @@
-interface Humano {
+interface IPessoa {
   nome: string;
-  idade: number;
+  idade?: number;
   [prop: string]: any; // atributo dinamico
-  saudar(sobrenome: string): void;
 }
 
-function saudarComOla(pessoa: Humano) {
-  console.log(`Olá ${pessoa.nome}`);
+function saudarComOla(pessoa: IPessoa) {
+  console.log(`Olá, ${pessoa.nome}`);
 }
 
-function mudarNome(pessoa: Humano) {
-  pessoa.nome = "Joana";
+function mudarNome(pessoa: IPessoa) {
+  pessoa.nome = 'Joana';
 }
 
-const pessoa: Humano = {
-  nome: "João",
+const pessoa = {
+  nome: 'João',
   idade: 27,
-  saudar(sobrenome: string) {
-    console.log(`Olá, meu nome ${this.nome} ${sobrenome} `);
-  }
-}
+};
 
-saudarComOla(pessoa)
-mudarNome(pessoa)
-saudarComOla(pessoa)
-// saudarComOla({ nome: "Jonas", idade: 25, altura: 1.75 });
-pessoa.saudar("Skywalker");
+saudarComOla(pessoa);
+mudarNome(pessoa);
+saudarComOla(pessoa);

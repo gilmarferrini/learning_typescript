@@ -1,19 +1,14 @@
 "use strict";
 function saudarComOla(pessoa) {
-    console.log(`Olá ${pessoa.nome}`);
+    console.log(`Olá, ${pessoa.nome}`);
 }
 function mudarNome(pessoa) {
-    pessoa.nome = "Joana";
+    pessoa.nome = 'Joana';
 }
 const pessoa = {
-    nome: "João",
+    nome: 'João',
     idade: 27,
-    saudar(sobrenome) {
-        console.log(`Olá, meu nome ${this.nome} ${sobrenome} `);
-    }
 };
 saudarComOla(pessoa);
 mudarNome(pessoa);
 saudarComOla(pessoa);
-// saudarComOla({ nome: "Jonas", idade: 25, altura: 1.75 });
-pessoa.saudar("Skywalker");
