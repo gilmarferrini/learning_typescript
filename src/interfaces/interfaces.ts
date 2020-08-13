@@ -40,3 +40,13 @@ meuCliente.nome = 'Han';
 saudarComOla(meuCliente);
 meuCliente.saudar('Solo');
 console.log(meuCliente);
+
+// Interface Função
+
+interface FuncaoCalculo {
+  (a: number, b: number): number;
+}
+
+let potencia: FuncaoCalculo = (base: number, expoente: number): number => base ** expoente;
+
+console.log(potencia(3, 10));
