@@ -2,7 +2,7 @@ interface IPessoa {
   nome: string;
   idade?: number;
   [prop: string]: any; // atributo dinamico
-  saudar?:(sobrenome: string) => void; // retorna nada ou undefined
+  saudar(sobrenome: string): void;
 }
 
 function saudarComOla(pessoa: IPessoa) {
@@ -25,3 +25,18 @@ saudarComOla(pessoa);
 mudarNome(pessoa);
 saudarComOla(pessoa);
 pessoa.saudar('Skywalker');
+
+class Cliente implements IPessoa {
+  nome: string = '';
+  ultimaCompra: Date = new Date();
+  saudar(sobrenome: string) {
+    console.log(`Olá meu nome é ${this.nome} ${sobrenome}`);
+  }
+}
+
+
+const meuCliente = new Cliente;
+meuCliente.nome = 'Han';
+saudarComOla(meuCliente);
+meuCliente.saudar('Solo');
+console.log(meuCliente);
