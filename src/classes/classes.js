@@ -190,3 +190,34 @@ class Aviao {
 const turboHelice = new Aviao("Tu-114", "PT-ABC");
 // turboHelice.modelo = 'DC-8'; // ERRO
 console.log(turboHelice);
+class RealA {
+    a() {
+        console.log("Real A");
+    }
+    ;
+}
+class RealAB {
+    a() {
+        console.log("Real A");
+    }
+    b() {
+        console.log("Real B");
+    }
+}
+class RealABC {
+    a() {
+        console.log("Real A");
+    }
+    b() {
+        console.log("Real B");
+    }
+    c() {
+        console.log("Real C");
+    }
+}
+class AbstrataABD {
+    a() { }
+    ;
+    b() { }
+    ;
+}

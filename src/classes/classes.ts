@@ -241,3 +241,54 @@ class Aviao {
 const turboHelice = new Aviao("Tu-114", "PT-ABC");
 // turboHelice.modelo = 'DC-8'; // ERRO
 console.log(turboHelice);
+
+// Herença
+
+interface A {
+  a(): void;
+}
+
+interface B {
+  b(): void;
+}
+// A palavra implements é quando tem relação de classe para interface
+// A palavra extends é de interface para interface e de classe para classe
+interface ABC extends A, B {
+  c(): void;
+}
+
+class RealA implements A {
+  a(): void {
+    console.log("Real A");
+  };
+}
+
+class RealAB implements A, B {
+  a(): void {
+    console.log("Real A");
+  }
+
+  b(): void {
+    console.log("Real B");
+  }
+}
+
+class RealABC implements ABC {
+  a(): void {
+    console.log("Real A");
+  }
+
+  b(): void {
+    console.log("Real B");
+  }
+
+  c(): void {
+    console.log("Real C");
+  }
+}
+
+abstract class AbstrataABD implements A, B {
+  a(): void {};
+  b(): void {};
+  abstract d(): void
+}
